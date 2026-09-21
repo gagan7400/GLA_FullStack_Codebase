@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        article {
+            width: 1000px;
+            display: flex;
+            background-color: bisque;
+            border: 2px solid red;
+            justify-content: space-around;
+            padding: 30px;
+            box-sizing: border-box;
+            border-radius: 30px;
+            gap: 30px;
+            align-items: center;
+            margin: auto;
+            margin-bottom: 30px;
+        }
+
+        @media(max-width: 430px) {
+            article {
+                flex-wrap: wrap;
+                width: 300px;
+            }
+
+            img {
+                width: 250px;
+            }
+        }
+
+        article div>h1 {
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 0px;
+        }
+
+        article div>p {
+            font-size: 20px;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        img {
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <img src=" C:\Users\Lenovo\Downloads\images.jpg" />
+        <div>
+            <h1>Wolf</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium perspiciatis a id corrupti obcaecati
+                aut, modi possimus debitis consequatur expedita repellendus animi, at atque eaque adipisci et provident
+                quas blanditiis magni. Et provident labore, maxime saepe sed, neque, delectus nam ea ut soluta
+                laboriosam! Tempora ad sunt laboriosam ducimus optio. Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Molestiae id totam, a aliquid accusamus reiciendis repellat ullam sequi voluptate consectetur!
+                Incidunt ex officiis accusantium. Nostrum quibusdam consectetur architecto voluptate optio dolor
+                facilis, veritatis magnam nobis enim consequuntur nesciunt voluptates. Exercitationem velit sequi est
+                blanditiis consectetur, odio magnam quibusdam animi possimus?</p>
+        </div>
+    </article>
+    <article>
+        <div>
+            <h1>Wolf</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium perspiciatis a id corrupti obcaecati
+                aut, modi possimus debitis consequatur expedita repellendus animi, at atque eaque adipisci et provident
+                quas blanditiis magni. Et provident labore, maxime saepe sed, neque, delectus nam ea ut soluta
+                laboriosam! Tempora ad sunt laboriosam ducimus optio. Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Molestiae id totam, a aliquid accusamus reiciendis repellat ullam sequi voluptate consectetur!
+                Incidunt ex officiis accusantium. Nostrum quibusdam consectetur architecto voluptate optio dolor
+                facilis, veritatis magnam nobis enim consequuntur nesciunt voluptates. Exercitationem velit sequi est
+                blanditiis consectetur, odio magnam quibusdam animi possimus?</p>
+        </div>
+        <img src=" C:\Users\Lenovo\Downloads\images.jpg" />
+
+    </article>
+</body>
+
+</html>
