@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Knock, Knock</title>
+    <style>
+        :root {
+            --wall: #d8cdb8;
+            --wall-dark: #c7ba9f;
+            --frame: #3e2a1e;
+            --door: #7a4a2b;
+            --door-dark: #5e3620;
+            --door-light: #8f5a34;
+            --knob: #d9b45c;
+            --ink: #2b2118;
+            --card: #fffaf0;
+            --accent: #b3552e;
+            padding-top: env(safe-area-inset-top, 0px);
+            padding-bottom: env(safe-area-inset-bottom, 0px);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root:not([data-theme="light"]) {
+                --wall: #2a241d;
+                --wall-dark: #211c17;
+                --card: #2f271e;
+                --ink: #f1e7d6;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(var(--wall), var(--wall-dark));
+            font-family: 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
+            color: var(--ink);
+            overflow: hidden;
+        }
+
+
+        .do {
+            width: 200px;
+            height: 400px;
+            background: green;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            position: relative;
+        }
+
+        .indo {
+            position: relative;
+            transition: all 2s ease;
+            width: 400px;
+            height: 400px;
+            background: blue;
+            border: 10px solid black;
+        }
+
+        .indo h2 {
+            width: 30px;
+            height: 30px;
+            background: red;
+            border-radius: 100%;
+            position: absolute;
+            top: 50%;
+        }
+
+        .do:hover .indo {
+            transform: rotateY(90deg);
+        }
+
+        .gret {
+            scale: .5;
+            transition: all 1s ease 1s;
+            width: 100%;
+            height: 150px;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .do:hover .gret {
+            scale: 2;
+            animation: shake 0.1s linear 1.5s 4 alternate;
+        }
+
+        @keyframes shake {
+            0% {
+                rotate: 0deg
+            }
+
+            50% {
+                rotate: 10deg
+            }
+
+            100% {
+                rotate: -10deg
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="do">
+        <div class="gret">
+            Welcome Bro!
+        </div>
+        <div class="indo">
+            door
+            <h2></h2>
+        </div>
+    </div>
+
+</body>
+
+</html>
