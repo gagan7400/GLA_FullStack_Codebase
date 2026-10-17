@@ -500,3 +500,19 @@ while (num) {
 console.log(count)
 //take any number and check it is palindrome or not 
 // also check it is armstrong or not 
+
+// do while  //always run atleast one time
+//
+let k = 1
+do {
+    console.log("hello");
+    k++
+} while (k == 10);
+
+
+// function :- is block of code used to run a specific task , one time  or multiple times as per need. it execute only when we call it using its name with parenthesis.
+function fun(parameters){
+    console.log("code")
+}
+
+fun(arguments)
