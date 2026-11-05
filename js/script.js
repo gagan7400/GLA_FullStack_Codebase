@@ -1153,7 +1153,3 @@ function eventtrigger(a) {
 }
 
 
-
-// //parentNode
-// //firstElementChild
-// //lastElementChild
