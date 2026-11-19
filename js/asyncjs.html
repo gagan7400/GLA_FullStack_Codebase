@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //  Fetch Api :- talking to the server 
+        // http methods : -get ,post ,put ,delete,patch ,options 
+        let url = "https://dummyjson.com/products";
+        // get
+        function getdata() {
+            let data = fetch(url, {
+                method: "GET",
+                headers: { "token": "xyz", "Authorization": "Bearer Token" }
+            });
+            data.then((res) => { return res.json() })
+                .then((result) => { console.log(result.products) })
+                .catch((err) => { console.log(err) })
+                .finally(() => { console.log("fetch compelete"); })
+        }
+        function postdata() {
+            let data = fetch(url + "/add", {
+                method: "POST",
+                body: JSON.stringify({ title: "first", price: 1000 }),
+                headers: { "Content-Type": "application/json", }
+            });
+            data.then((res) => { return res.json() })
+                .then((result) => { console.log(result) })
+                .catch((err) => { console.log(err) })
+                .finally(() => { console.log("fetch compelete"); })
+        }
+        postdata();
+        function putdata() {
+            let data = fetch(url + "/55", {
+                method: "PUT",
+                body: JSON.stringify({ title: "first", price: 1000 }),
+                headers: { "Content-Type": "application/json", }
+            });
+            data.then((res) => { return res.json() })
+                .then((result) => { console.log(result) })
+                .catch((err) => { console.log(err) })
+                .finally(() => { console.log("fetch compelete"); })
+        }
+        putdata();
+        function deletedata() {
+            let data = fetch(url + "/33", { method: "DELETE" });
+            data.then((res) => { return res.json() })
+                .then((result) => { console.log(result) })
+                .catch((err) => { console.log(err) })
+                .finally(() => { console.log("fetch compelete"); })
+        }
+        deletedata();
+        //JSON:-javascript Object Notation ;//language independent
+        let obj = {
+            name: 'raj',
+            // comment here
+            age: 10,
+        };
+        // let obj = { "name": "raj", "age": 10};
+        // stringify , parse
+        let converted = JSON.stringify(obj);
+        console.log(converted);
+        console.log(JSON.parse(converted));
+
+        // unviersity search API
+let api  ="http://universities.hipolabs.com/";        
+
+
+
+    </script>
+</body>
+
+</html>
