@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            border: solid
+        }
+    </style>
+</head>
+
+<body>
+    <p class="p">hello world</p>
+    <p>hello world</p>
+    <p>hello world</p>
+    <p> world</p>
+    <p>hello world</p>
+    <p>hello world</p>
+    <button>showhide</button>
+    <div class="card">
+        <p id="p">helloworld</p>
+        <span>
+            <p>inside span</p>
+        </span>
+    </div>
+    <div>
+        <button>dfmkndf</button>
+    </div>
+    <button style="display:none"> hide</button>
+    <input type="text" value="hello" name="" id="">
+    <input type="checkbox" name="" id="">
+    <input type="checkbox" name="" checked id="">
+    <input type="checkbox" name="" id="">
+    <a href="www.flipkart.com"> flipkart 1</a>
+    <a href="https.flipkart.com"> flipkart 2</a>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        console.log(jQuery)
+        console.log($);
+        // $("p").text("new text here")
+        // $("#p").text("new text here by id ")
+        // $(".p").text("new text here by class ")
+        // $("button , p").text("new text here by multiple selection")
+        // $("div p").text("new text here by child selection")
+        // $("div > p").text("new text here by direct child selection")
+
+        // $("p:first").text("this is first p tag ")
+        // $("p:last").text("this is last p tag ")
+        // $("p:even").text("this is even p tag ")
+        // $("p:odd").text("this is odd p tag ")
+        // $("p:nth-child(2)").text("this is 2nd nth child p tag ")
+        // $("p:nth(4)").text("this is 4rth  p tag ")
+        // $("p:eq(6)").text("this is 6rth index p tag ")
+
+        // //  $("[href]").text("changed text");
+        // $("[href^=https]").text("changed text");
+        // // $("p:contains(hello)").text("hello is present");
+        // $("p:not(.p)").text("hello is present");
+        // $("div:has(p)").css("border", "10px solid red");
+        // console.log($("input:checked"));
+        // console.log($("button:visible"));
+        // console.log($("button:hidden"));
+
+        console.log($("p:last").text());
+        console.log($("div").html());
+        console.log($("input").val());
+
+        $("div").html("<p> hello new p</p>");
+        $("input:first").val("this is updated value")
+        $("#btn").click(function () {
+            $("p").text("this is updated text by click event")
+        })
+        // 19 nov :-  2,8,13,15,16,21,23,29,31,33,34,35,36,38,47,48,51,
+    </script>
+</body>
+
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <style>
+        .card {
+            border: solid
+        }
+    </style>
+</head>
+
+<body>
+    
+    <script>
+        let hide = false
+        function showhide() {
+            if (!hide) {
+                document.querySelector(".card").style.display = "none";
+                hide = true
+            } else {
+                document.querySelector(".card").style.display = "block";
+                hide = false;
+            }
+        }
+    </script>
+</body>
+
+</html> -->
